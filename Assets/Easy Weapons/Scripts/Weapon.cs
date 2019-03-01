@@ -285,6 +285,14 @@ public class Weapon : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+
+	   
+	        if (transform.parent != null&&( transform.parent.tag == "PlayerCamera"||transform.parent.tag == "Player") )
+	            canFire = true;
+	        else
+	            canFire = false;
+    
+	    
 		
 		// Calculate the current accuracy for this weapon
 		currentAccuracy = Mathf.Lerp(currentAccuracy, accuracy, accuracyRecoverRate * Time.deltaTime);

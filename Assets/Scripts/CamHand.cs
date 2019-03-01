@@ -2,19 +2,38 @@
 using System.Collections;
 
 public class CamHand : MonoBehaviour {
-	public float MaxDistance = 1.5f;
-	public Texture2D CursorTexture;
-	public bool cursorenter;
-	public bool cursor;
-	public GameObject ObjectUse;
-	
-	// Use this for initialization
-	void Start ()
-	{
-	}
+	public float MaxDistance = 3f;
+    public bool cursorenter{get; private set;}
+    private bool cursor;
+    private bool atPlayer = false;
+    private Rigidbody rigidbody;
+    private BoxCollider boxCollider;
+    private GameObject weaponScript;
+
+
+
+    // Use this for initialization
+    void Start ()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
+        
+    }
 	void Update ()
 	{
-		if(cursor == true)
+
+
+	    if (transform.parent != null && (transform.parent.tag == "PlayerCamera" || transform.parent.tag == "Player"))
+	    {
+            atPlayer = true;
+	        
+	    }
+	    else
+	    {
+	        atPlayer = false;
+	    }
+
+	    if (cursor == true)
 		{
 			GameObject player = GameObject.FindGameObjectWithTag("Player");
 			if(Vector3.Distance(transform.position, player.transform.position)< MaxDistance)
@@ -24,11 +43,67 @@ public class CamHand : MonoBehaviour {
 			else
 			{
 				cursorenter = false;
+                
 			}
 		}
-		
-	}
-	void OnMouseEnter()
+
+	    if (cursorenter & Input.GetKeyDown("f"))
+	    {
+	        if (GameObject.FindGameObjectWithTag("CurrentGun") != null)
+	        {
+	            GameObject difGun = GameObject.FindGameObjectWithTag("CurrentGun");
+	            difGun.GetComponent<CamHand>().Drop();
+                
+         
+
+	        }
+	        transform.position = (GameObject.FindGameObjectWithTag("GunPlace").transform.position);
+	        transform.rotation = (GameObject.FindGameObjectWithTag("GunPlace").transform.rotation);
+            transform.SetParent(GameObject.FindGameObjectWithTag("PlayerCamera").transform);
+            rigidbody.isKinematic = true;
+	        boxCollider.enabled = false;
+	        transform.gameObject.tag = "CurrentGun";
+
+
+
+	    }
+
+	    if (Input.GetKeyDown("q"))
+	    {
+            Drop();
+        }
+
+        if (atPlayer)
+        {
+
+            var a = GetComponent<Weapon>();
+            a.enabled = true;
+
+
+
+        }
+
+	    else
+	    {
+	        var a = GetComponent<Weapon>();
+	        a.enabled = false;
+	    }
+    }
+
+
+
+    public void Drop()
+    {
+        if (atPlayer)
+        {
+            transform.parent = null;
+            rigidbody.isKinematic = false;
+            boxCollider.enabled = true;
+            transform.gameObject.tag = "Gun";
+
+        }
+    }
+    void OnMouseEnter()
 	{
 		cursor = true;
 	}
@@ -47,3 +122,5 @@ public class CamHand : MonoBehaviour {
 
 	}
 }
+
+
