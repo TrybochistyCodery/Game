@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf59354a34ce29d479de3c8915d5d9ec, type: 3}
+  m_Name: FoliageDatabase
+  m_EditorClassIdentifier: 
+  _prototypes:
+  - _FoliageMesh: {fileID: 0}
+    _FoliageTexture: {fileID: 2800000, guid: 2c528fec5d95e4ac28cf46399b887662, type: 3}
+    _foliageID_INTERNAL: 1
+    _spread: 1
+    _minimumWidth: 2
+    _maximumWidth: 3
+    _minimumHeight: 1.5
+    _maximumHeight: 2
+    _receiveShadows: 1
+    _dryColor: {r: 0.85294116, g: 0.85294116, b: 0.85294116, a: 1}
+    _healthyColor: {r: 1, g: 1, b: 1, a: 1}
+    _castShadows: 0
+    _useCustomFadeDistance: 0
+    _fadeDistance: 100
+    _maxGeneratedDensity: 10
+    _useInstancing: 1
+    _useColorMap: 0
+    _rotateNormals: 0
+    _enabled: 1
+    _renderingLayer: 0
+    _touchBendingEnabled: 1
+    _touchBendingStrength: 0.97
+    _cutOff: 0.3
+    _useCustomWind: 0
+    customWindSettings:
+      _windBending: 1
+      _windSpeed: 1
+    _useLODs: 1
+    _lods:
+    - lod_calculated_distance: 20
+      lod_value_multiplier: 1
+      lod_coverage_percentage: 20
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 40
+      lod_value_multiplier: 0.6
+      lod_coverage_percentage: 40
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 60
+      lod_value_multiplier: 0.4
+      lod_coverage_percentage: 60
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 100
+      lod_value_multiplier: 0.2
+      lod_coverage_percentage: 100
+      LOD_Mesh: {fileID: 0}
+    _FoliageInstancedMeshData:
+      mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+      mat: {fileID: 2100000, guid: 38a066107fb64a247afc9b43c4ff4624, type: 2}
+      eulerAngles: {x: 0, y: 270, z: 0}
+      _rendererScale: {x: 0.00000011920929, y: 1, z: 0.99999994}
+      _worldScale: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      offset: {x: 0, y: 0.5, z: 0}
+      vertexCount: 4
+      meshInstancesLimiter_Optimization_Clamp: 20
+    instancedEuler: {x: 0, y: 270, z: 0}
+  - _FoliageMesh: {fileID: 0}
+    _FoliageTexture: {fileID: 2800000, guid: 7c0bbd8cb29b56b479a200a7c364514c, type: 3}
+    _foliageID_INTERNAL: 2
+    _spread: 2
+    _minimumWidth: 2
+    _maximumWidth: 2.5
+    _minimumHeight: 2
+    _maximumHeight: 2.5
+    _receiveShadows: 1
+    _dryColor: {r: 1, g: 1, b: 1, a: 1}
+    _healthyColor: {r: 1, g: 1, b: 1, a: 1}
+    _castShadows: 0
+    _useCustomFadeDistance: 0
+    _fadeDistance: 100
+    _maxGeneratedDensity: 10
+    _useInstancing: 1
+    _useColorMap: 0
+    _rotateNormals: 0
+    _enabled: 1
+    _renderingLayer: 0
+    _touchBendingEnabled: 1
+    _touchBendingStrength: 0.97
+    _cutOff: 0.3
+    _useCustomWind: 0
+    customWindSettings:
+      _windBending: 1
+      _windSpeed: 1
+    _useLODs: 1
+    _lods:
+    - lod_calculated_distance: 20
+      lod_value_multiplier: 1
+      lod_coverage_percentage: 20
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 40
+      lod_value_multiplier: 0.6
+      lod_coverage_percentage: 40
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 60
+      lod_value_multiplier: 0.4
+      lod_coverage_percentage: 60
+      LOD_Mesh: {fileID: 0}
+    - lod_calculated_distance: 100
+      lod_value_multiplier: 0.2
+      lod_coverage_percentage: 100
+      LOD_Mesh: {fileID: 0}
+    _FoliageInstancedMeshData:
+      mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+      mat: {fileID: 2100000, guid: 5fc6e2a7cd6d6b5498f4518b07e56e99, type: 2}
+      eulerAngles: {x: 0, y: 270, z: 0}
+      _rendererScale: {x: 0.00000011920929, y: 1, z: 0.99999994}
+      _worldScale: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      offset: {x: 0, y: 0.5, z: 0}
+      vertexCount: 4
+      meshInstancesLimiter_Optimization_Clamp: 20
+    instancedEuler: {x: 0, y: 270, z: 0}
+  globalWindSettings:
+    _windBending: 1
+    _windSpeed: 2
