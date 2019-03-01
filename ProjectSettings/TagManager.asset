@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Triggerer
+  - Grass
+  - Stone
+  - Enemy
+  - Team2
+  - Ground
+  - waypoint
+  - CAR
+  - bullet
+  - Gun
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Waypoint
+  - Waypoint
+  - MovableObject
+  - Ragdoll
+  - RemotePlayer
+  - IgnoreBullets
+  - Enemy
+  - Pickup
+  - Trigger
+  - MovingPlatform
+  - Debris
+  - LocalPlayer
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
