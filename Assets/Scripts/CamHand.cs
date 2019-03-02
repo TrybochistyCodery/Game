@@ -9,6 +9,7 @@ public class CamHand : MonoBehaviour {
     private Rigidbody rigidbody;
     private BoxCollider boxCollider;
     private GameObject weaponScript;
+    public float dropForce = 250;
 
 
 
@@ -100,6 +101,7 @@ public class CamHand : MonoBehaviour {
             rigidbody.isKinematic = false;
             boxCollider.enabled = true;
             transform.gameObject.tag = "Gun";
+            rigidbody.AddForce(transform.forward*dropForce);
 
         }
     }
