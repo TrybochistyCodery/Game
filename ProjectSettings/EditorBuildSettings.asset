@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Easy Weapons/Demo/newdemo.unity
     guid: 29a95fb3f098c9e4bbc7cb1eb4d2bc77
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 47fddbf7a33aa43929dcf3577347b41a
   - enabled: 1
